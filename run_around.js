@@ -4,8 +4,8 @@ var directionX=true;
 var directionY=true;
 var step=1;
 var speed=1;
-var float=document.getElementById("float");
 function move(){
+    var float=document.getElementById("float");
 	var height=document.documentElement.clientHeight;
 	var width=document.documentElement.clientWidth;
 	var imgHeight=float.offsetHeight;
