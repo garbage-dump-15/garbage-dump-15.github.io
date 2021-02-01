@@ -6,6 +6,7 @@ var step=1;
 var speed=1;
 function move(){
     var float=document.getElementById("float");
+    if(float) {
 	var height=document.documentElement.clientHeight;
 	var width=document.documentElement.clientWidth;
 	var imgHeight=float.offsetHeight;
@@ -18,7 +19,8 @@ function move(){
 	
 	if(directionY){yPos=yPos+step;}else{yPos=yPos-step;}
 	if(yPos<=0){yPos=0;directionY=true;}
-	if(yPos>=height-imgHeight){yPos=height-imgHeight;directionY=false;}
+    if(yPos>=height-imgHeight){yPos=height-imgHeight;directionY=false;}
+    }
 	t=setTimeout(move,speed);
     }
 window.onload = move;
